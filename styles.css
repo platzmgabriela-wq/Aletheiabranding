@@ -1,0 +1,283 @@
+/* --- VARIABLES Y CONFIGURACIÓN PREDETERMINADA --- */
+:root {
+    --bg-color: #fcfbfa; /* Blanco crudo/editorial */
+    --text-main: #111111; /* Negro absoluto para contraste */
+    --text-muted: #555555; /* Gris oscuro para textos largos */
+    --accent-color: #7d7569; /* Tono piedra/topo sutil */
+    --font-serif: 'Playfair Display', 'Didot', 'Garamond', serif;
+    --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+}
+
+/* --- ESTILOS GENERALES --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* --- HEADER / NAVEGACIÓN --- */
+header {
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* --- SECCIÓN 1: HERO --- */
+.hero {
+    padding: 10rem 0 8rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    max-width: 900px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid var(--text-main);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    opacity: 1;
+}
+
+/* --- SECCIÓN 2: EL MANIFIESTO --- */
+.manifesto {
+    padding: 8rem 0;
+    background-color: #f5f3f0;
+}
+
+.manifesto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.manifesto h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.manifesto p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.manifesto p strong {
+    color: var(--text-main);
+}
+
+/* --- SECCIÓN 3: SERVICIOS --- */
+.services {
+    padding: 8rem 0;
+}
+
+.services-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.service-card {
+    border-top: 1px solid var(--text-main);
+    padding-top: 2rem;
+}
+
+.service-num {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- SECCIÓN 4: ESTUDIO VISUAL --- */
+.journal {
+    padding: 8rem 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.journal-header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.journal-header h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.journal-item {
+    display: block;
+}
+
+.journal-img-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #eae7e2;
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s ease;
+}
+
+.journal-item:hover .journal-img-placeholder {
+    transform: scale(0.98);
+}
+
+.journal-item h4 {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.journal-item span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-color);
+}
+
+/* --- SECCIÓN 5: CONTACTO --- */
+.cta {
+    padding: 10rem 0;
+    text-align: center;
+    background-color: #111111;
+    color: #fcfbfa;
+}
+
+.cta h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+    opacity: 0.8;
+}
+
+.cta .btn {
+    border-color: #fcfbfa;
+    color: #fcfbfa;
+}
+
+.cta .btn:hover {
+    background-color: #fcfbfa;
+    color: #111111;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    letter-spacing: 0.05em;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 968px) {
+    .hero h1 { font-size: 3rem; }
+    .manifesto-grid, .services-grid, .journal-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .hero { padding: 6rem 0; }
+}
